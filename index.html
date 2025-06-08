@@ -1,110 +1,472 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Louis Mascari</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-			<section id="header">
-				<div class="inner">
-					<div id="name-nav">
-						<h1>Louis Mascari</h1>
-						<nav id="nav">
-							<ul class="icons">
-								<li><a target="_blank" href="https://www.linkedin.com/in/louis-mascari/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a target="_blank" href="https://github.com/Louis-Mascari" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								<li><a target="_blank" href="assets/Louis_Mascari_Resume.pdf" class="icon fas fa-file-alt"><span class="label">Resume</span></a></li>
-								<li><a href="mailto:LouisMascari@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</div>
-					<img id="profile" src="./images/profile.jpg" style="max-height: 780px; max-width: 520px;" alt="Portrait of Louis Mascari">
-					<div id="bio">
-						<p>I'm a full-stack software engineer experienced in JavaScript/Node.js, TypeScript, React, Ruby, Python, Golang, PostgreSQL, MongoDB, Redis, Docker, AWS, and other tools.</p>
-						<p>I'm currently seeking my next role and am excited to continue contributing to innovative projects and tackling new challenges in the tech industry.</p>
-						<p>Most recently, I built <a class="haven" href="https://mimic-replay.com/" target="_blank">MIMIC</a>, an open-source session replay framework simplifying recording & replaying user sessions to enhance web application debugging.</p>
-					</div>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">MIMIC</a></li>
-					</ul>
-				</div>
-			</section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Louis Mascari | Software Engineer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Louis Mascari - Full Stack Software Engineer specializing in JavaScript/Typescript, Node, React, Python, Django, REST, GraphQL, SQL, NoSQL, AWS and more."
+    />
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2><a target="_blank" class="haven" href="https://mimic-replay.com">MIMIC</a></h2>
-							</header>
-							<p>For developers, MIMIC provides a Python CLI installer, simplifying the instrumentation of applications to enable session recording. Additionally, MIMIC offers a robust backend infrastructure and feature-rich frontend dashboard to efficiently manage session data and provide insightful analytics. With MIMIC, developers gain a powerful toolset to diagnose and resolve issues swiftly, ensuring optimal performance and user satisfaction.</p>
-							<ul class="actions special">
-								<li><a target="_blank" href="https://mimic-replay.com" class="button">Read the Case Study</a></li>
-							</ul>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span><a target="_blank" class="haven" href="https://mimic-replay.com/"><img class="logo" src="images/mimic-logo.png" alt="MIMIC Logo" /></a><span class="image fit"></span>
-							<!-- <span><a class="haven" href="https://mimic-replay.com/"><img class="logo" src="images/MIMIC.gif" alt="MIMIC Logo"></a><span class="image fit"></span> -->
-						</div>
-					</div>
-				</div>
-			</section>
+    <!-- SEO Meta Tags -->
+    <meta name="author" content="Louis Mascari" />
+    <meta
+      name="keywords"
+      content="developer, software engineer, full-stack, fullstack, django, sql, nosql, aws, javascript, typescript, react, ruby, python, nodejs"
+    />
 
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Louis Mascari | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Full Stack Software Engineer specializing in JavaScript/Typescript, Node, React, Python, Django, REST, GraphQL, SQL, NoSQL, AWS and more."
+    />
+    <meta
+      property="og:image"
+      content="https://louis-mascari.github.io/images/profile.jpg"
+    />
+    <meta property="og:url" content="https://louis-mascari.github.io/" />
+    <meta property="og:type" content="website" />
 
-		<!-- Three -->
-			<section id="three" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Projects</h2>
-					</header>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/request-neko.PNG" alt="" /></span>
-							<h3>Request-Neko</h3>
-							<p> A database-backed webhook request inspection and
-								debugging application.<br>(Node.js/Express, React, MongoDB, PostgreSQL, Nginx,
-								deployed to DigitalOcean Droplet)</p>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/sup.PNG" alt="" /></span>
-							<h3>Supervisory Tracker</h3>
-							<p>A CRUD application for physical therapists to streamline management of patient reevaluation and assistant supervisory requirements.<br>(Ruby, Sinatra, ERB, PostgreSQL)</p>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/todo.PNG" alt="" /></span>
-							<h3>What To-Do</h3>
-							<p>An interactive single page task tracking manager with a variety of filtering and sorting features.<br>(Node.js/Express, Handlebars, jQuery, PostgreSQL)</p>
-						</div>
-					</div>
-				</div>
-			</section>
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Louis Mascari | Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Full Stack Software Engineer specializing in JavaScript/Typescript, Node, React, Python, Django, REST, GraphQL, SQL, NoSQL, AWS and more."
+    />
+    <meta
+      name="twitter:image"
+      content="https://louis-mascari.github.io/images/profile.jpg"
+    />
 
-		<!-- Footer -->
-			<section id="footer">
-				<h3>Let's get in touch!</h3>
-				<p>I'm currently looking for my next opportunity.<br>Please reach out if you think I'd be a good fit for your team!</p>
-				<ul class="icons">
-					<li><a target="_blank" href="https://www.linkedin.com/in/louis-mascari/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a target="_blank" href="https://github.com/Louis-Mascari" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								<li><a target="_blank" href="assets/Louis_Mascari_Resume.pdf" class="icon fas fa-file-alt"><span class="label">Resume</span></a></li>
-								<li><a href="mailto:LouisMascari@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Louis Mascari</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</section>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="assets/css/modern.css" />
+    <link rel="stylesheet" href="assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="assets/css/print.css" media="print" />
+    <!-- Fallback styles for older browsers -->
+    <script>
+      if (
+        !window.CSS ||
+        !window.CSS.supports ||
+        !window.CSS.supports("--a", "0")
+      ) {
+        document.write(
+          '<link rel="stylesheet" href="assets/css/fallback.css">'
+        );
+      }
+    </script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+      <div class="loader"></div>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Header Section -->
+    <header class="header" id="home">
+      <div class="container">
+        <div class="navbar-container">
+          <nav class="navbar">
+            <div class="logo">
+              <a href="#home"
+                ><img
+                  src="favicon.ico"
+                  alt="Logo"
+                  class="logo-img"
+                  style="width: 40px; height: 40px"
+              /></a>
+            </div>
+            <ul class="nav-links">
+              <li>
+                <a href="#featured">Featured</a>
+              </li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="assets/Louis_Mascari_Resume.pdf" target="_blank"
+                  >Resume</a
+                >
+              </li>
+            </ul>
+            <button class="menu-toggle">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </nav>
+          <!-- Mobile Navigation -->
+          <div class="mobile-nav">
+            <ul>
+              <li>
+                <a href="#featured">Featured</a>
+              </li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="assets/Louis_Mascari_Resume.pdf" target="_blank"
+                  >Resume</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
 
-	</body>
+        <div class="hero">
+          <div class="hero-content">
+            <div class="profile-container animate-fadeIn">
+              <img
+                src="./images/profile.jpg"
+                alt="Portrait of Louis Mascari"
+                class="profile-img"
+              />
+            </div>
+            <div class="hero-text">
+              <h1 class="animate-fadeIn delay-1">Louis Mascari</h1>
+              <p class="animate-fadeIn delay-2">
+                I'm a Full Stack Software Engineer at Songtrust, working with
+                Python/Django, React/TypeScript, GraphQL/REST and AWS to build and maintain
+                features for a music royalty administration platform.
+              </p>
+              <p class="animate-fadeIn delay-2">
+                While I'm very happy in my current role, I'm always open to
+                hearing about new opportunities where I can leverage my
+                full-stack development expertise.
+              </p>
+              <p class="animate-fadeIn delay-2">
+                Previously, I developed
+                <a href="https://mimic-replay.com/" target="_blank">MIMIC</a>,
+                an open-source session replay framework simplifying recording
+                and replaying user sessions.
+              </p>
+            </div>
+          </div>
+          <ul class="social-links animate-fadeIn delay-3">
+            <li>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/louis-mascari/"
+                class="icon brands fa-linkedin"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://github.com/Louis-Mascari"
+                class="icon brands fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:LouisMascari@gmail.com"
+                class="icon solid alt fa-envelope"
+                ><span class="label">Email</span></a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="assets/Louis_Mascari_Resume.pdf"
+                class="icon fas fa-file-alt"
+                ><span class="label">Resume</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Featured Project -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Featured</h2>
+        </div>
+        <div class="featured-project reveal">
+          <div class="featured-project-content">
+            <h3>
+              <a target="_blank" href="https://mimic-replay.com">MIMIC</a>
+            </h3>
+            <p>
+              For developers, MIMIC provides a Python CLI installer, simplifying
+              the instrumentation of applications to enable session recording.
+              Additionally, MIMIC offers a robust backend infrastructure and
+              feature-rich frontend dashboard to efficiently manage session data
+              and provide insightful analytics. With MIMIC, developers gain a
+              powerful toolset to diagnose and resolve issues swiftly, ensuring
+              optimal performance and user satisfaction.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">S3</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Analytics</span>
+            </div>
+            <div style="margin-top: 1.5rem">
+              <a target="_blank" href="https://mimic-replay.com" class="btn"
+                >Read the Case Study</a
+              >
+            </div>
+          </div>
+          <div class="featured-project-img">
+            <a target="_blank" href="https://mimic-replay.com/"
+              ><img src="images/mimic.gif" alt="MIMIC Animation"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="section"
+      style="background-color: var(--color-light)"
+    >
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Skills & Technologies</h2>
+        </div>
+        <div class="skills-container reveal">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-list">
+              <div class="skill-item">JavaScript</div>
+              <div class="skill-item">TypeScript</div>
+              <div class="skill-item">React</div>
+              <div class="skill-item">HTML/CSS</div>
+              <div class="skill-item">MUI</div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & APIs</h3>
+            <div class="skill-list">
+              <div class="skill-item">Python</div>
+              <div class="skill-item">Django</div>
+              <div class="skill-item">Node.js</div>
+              <div class="skill-item">Express</div>
+              <div class="skill-item">Ruby</div>
+              <div class="skill-item">GraphQL</div>
+              <div class="skill-item">REST</div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Database & Cloud</h3>
+            <div class="skill-list">
+              <div class="skill-item">PostgreSQL</div>
+              <div class="skill-item">MongoDB</div>
+              <div class="skill-item">Redis</div>
+              <div class="skill-item">AWS</div>
+              <div class="skill-item">S3</div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>DevOps & Tools</h3>
+            <div class="skill-list">
+              <div class="skill-item">Docker</div>
+              <div class="skill-item">CircleCI</div>
+              <div class="skill-item">Git/GitHub</div>
+              <div class="skill-item">unittest</div>
+              <div class="skill-item">Jest</div>
+              <div class="skill-item">Cypress</div>
+              <div class="skill-item">Vitest</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img
+                src="images/request-neko.PNG"
+                alt="Request-Neko Project Screenshot"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Request-Neko</h3>
+              <p>
+                A database-backed webhook request inspection and debugging
+                application.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Nginx</span>
+              </div>
+            </div>
+          </article>
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img
+                src="images/sup.PNG"
+                alt="Supervisory Tracker Project Screenshot"
+              />
+            </div>
+            <div class="project-content">
+              <h3>Supervisory Tracker</h3>
+              <p>
+                A CRUD application for physical therapists to streamline
+                management of patient reevaluation and assistant supervisory
+                requirements.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Ruby</span>
+                <span class="tech-tag">Sinatra</span>
+                <span class="tech-tag">ERB</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+          <!-- Project 3 -->
+          <article class="project-card reveal">
+            <div class="project-img">
+              <img src="images/todo.PNG" alt="What To-Do Project Screenshot" />
+            </div>
+            <div class="project-content">
+              <h3>What To-Do</h3>
+              <p>
+                An interactive single page task tracking manager with a variety
+                of filtering and sorting features.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">Handlebars</span>
+                <span class="tech-tag">jQuery</span>
+                <span class="tech-tag">PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Let's Connect</h2>
+        </div>
+        <div class="contact-container reveal">
+          <div class="contact-info">
+            <p>
+              I'm currently working as a Full Stack Software Engineer at
+              Songtrust.
+            </p>
+            <p>
+              While I enjoy my current role, I'm always open to connecting with
+              fellow developers and discussing interesting projects or
+              opportunities.
+            </p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <a href="mailto:LouisMascari@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                  <span>LouisMascari@gmail.com</span>
+                </a>
+              </div>
+              <div class="contact-method">
+                <a
+                  href="https://www.linkedin.com/in/louis-mascari/"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>linkedin.com/in/louis-mascari</span>
+                </a>
+              </div>
+              <div class="contact-method">
+                <a href="https://github.com/Louis-Mascari" target="_blank">
+                  <i class="fab fa-github"></i>
+                  <span>github.com/Louis-Mascari</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-social">
+          <li>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/louis-mascari/"
+              class="icon brands fa-linkedin"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/Louis-Mascari"
+              class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="assets/Louis_Mascari_Resume.pdf"
+              class="icon fas fa-file-alt"
+              ><span class="label">Resume</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:LouisMascari@gmail.com"
+              class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <div class="footer-text">
+          <p>&copy; 2025 Louis Mascari. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle dark/light mode">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="assets/js/modern.js"></script>
+  </body>
 </html>

@@ -1,0 +1,315 @@
+/* Dark mode styles */
+[data-theme="dark"] {
+  --color-primary: #3b82f6; /* Lighter Blue for dark mode */
+  --color-primary-dark: #2563eb; /* Blue */
+  --color-secondary: #34d399; /* Lighter Green for dark mode */
+  --color-dark: #f8fafc; /* Very light gray for text in dark mode - maximum contrast */
+  --color-light: #1f2937; /* Dark gray for backgrounds in dark mode */
+  --color-white: #111827; /* Dark background in dark mode */
+  --color-light-gray: #374151; /* Medium gray for dividers in dark mode */
+  --color-medium-gray: #e2e8f0; /* Even lighter Medium Gray for better contrast in dark mode */
+  --color-card-bg: #1f2937; /* Dark card background */
+  --color-body-bg: #111827; /* Dark body background */
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] body {
+  background-color: var(--color-body-bg);
+  color: var(--color-dark);
+}
+
+[data-theme="dark"] .section {
+  background-color: var(--color-body-bg);
+}
+
+[data-theme="dark"] .project-card,
+[data-theme="dark"] .skill-category {
+  background-color: var(--color-card-bg);
+  color: var(--color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure all text has proper contrast in dark mode */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--color-dark);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Add subtle text shadow for better readability */
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] span:not(.icon),
+[data-theme="dark"] label,
+[data-theme="dark"] li:not(.social-links li):not(.footer-social li) {
+  color: var(--color-dark);
+  font-weight: 400; /* Slightly increased font weight for better visibility */
+}
+
+[data-theme="dark"] .header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url("../images/header.jpg");
+}
+
+/* Special styling for hero section */
+[data-theme="dark"] .hero {
+  background: rgba(0, 0, 0, 0.3); /* Darker background for dark mode */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Footer and navigation styling */
+[data-theme="dark"] footer {
+  background-color: rgba(17, 24, 39, 0.98);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .navbar-scrolled {
+  background-color: rgba(17, 24, 39, 0.95); /* Darker with transparency */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .navbar .nav-links a {
+  color: var(--color-dark);
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .navbar .nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* Form elements in dark mode */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-dark);
+  font-weight: 400;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+  outline: none;
+}
+
+/* Skill items styling */
+[data-theme="dark"] .skill-item {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .skill-item:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Links and buttons */
+[data-theme="dark"] a {
+  color: var(--color-primary);
+  transition: all 0.2s ease;
+  font-weight: 500;
+  text-decoration-thickness: 1px;
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--color-secondary);
+  text-decoration-thickness: 2px;
+}
+
+[data-theme="dark"] .btn {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+[data-theme="dark"] .btn:hover {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #ffffff;
+  border: 2px solid var(--color-primary);
+}
+
+/* Theme toggle and back to top buttons */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff !important; /* Always white for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.back-to-top i {
+  color: #ffffff !important;
+  font-size: 1.2rem;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* Social icons in dark mode - completely integrated from social-icons-fix.css */
+[data-theme="dark"] .social-links li a,
+[data-theme="dark"] .footer-social li a {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease !important; /* Force transition */
+  will-change: transform;
+  transform: none; /* Reset initial transform state */
+  box-shadow: none; /* Reset initial box-shadow */
+}
+
+/* Ensure icon hover effects work in dark mode */
+[data-theme="dark"] .social-links li a:hover {
+  transform: translateY(-2px) !important; /* Force transform */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  background-color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .footer-social li a:hover {
+  transform: translateY(-3px) !important; /* Force transform */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+  background-color: var(--color-primary) !important;
+}
+
+/* Ensure icon visibility in all states */
+[data-theme="dark"] .social-links li a i,
+[data-theme="dark"] .footer-social li a i,
+[data-theme="dark"] .icon.brands:before,
+[data-theme="dark"] .icon.solid:before,
+[data-theme="dark"] .icon.fas:before,
+[data-theme="dark"] .icon.fab:before {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Override any conflicting rules with stronger selectors */
+html[data-theme="dark"] body .social-links li a:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  background-color: var(--color-primary) !important;
+}
+
+html[data-theme="dark"] body .footer-social li a:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+  background-color: var(--color-primary) !important;
+}
+
+/* Contact section */
+[data-theme="dark"] .contact-method i {
+  color: #ffffff !important;
+  background-color: var(--color-primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile menu in dark mode - enhanced contrast */
+[data-theme="dark"] .menu-toggle span {
+  background-color: #ffffff !important; /* Bright white for maximum contrast */
+  height: 3px; /* Slightly thicker lines for better visibility */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+}
+
+[data-theme="dark"] .mobile-nav {
+  background-color: rgba(17, 24, 39, 0.98) !important;
+}
+
+[data-theme="dark"] .mobile-nav ul li a {
+  color: #fff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .mobile-nav ul li a:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Theme toggle icon visibility - improved */
+[data-theme="light"] .theme-toggle .fa-sun {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .fa-moon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .fa-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .fa-sun {
+  display: block;
+  color: #ffffff;
+}
