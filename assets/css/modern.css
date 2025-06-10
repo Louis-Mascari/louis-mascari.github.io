@@ -123,10 +123,9 @@ img {
   background-size: cover;
   background-position: center;
   color: var(--color-white);
-  padding: 2rem 0; /* Reduced from var(--spacing-xl) 0 */
+  padding: 1rem 0;
   position: relative;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
-  /* Add a subtle animation for a more polished look */
   animation: headerFadeIn 1s ease-out;
 }
 
@@ -143,7 +142,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-xs) 0;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: var(--spacing-md);
@@ -162,8 +161,8 @@ img {
 }
 
 .logo-img {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border-radius: 4px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -178,10 +177,10 @@ img {
   position: relative;
   padding: 0.5rem 0.25rem;
   transition: all 0.3s ease;
-  color: #ffffff; /* Always white for better visibility */
+  color: #ffffff;
   font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for better legibility */
-  letter-spacing: 0.01em; /* Slightly more spacing between letters */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.01em;
 }
 
 .nav-links li a::after {
@@ -210,22 +209,17 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* Reduce the gap from var(--spacing-lg) (2rem) to 1rem */
+  gap: 1rem;
   text-align: center;
   max-width: 900px;
-  margin: 0 auto;
+  margin: auto;
   padding: 3rem;
   position: relative;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.85
-  ); /* More opaque white background for better readability */
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2); /* Subtle blue shadow */
-  border: 1px solid var(--color-primary); /* Keep blue border for consistency */
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.2);
+  border: 1px solid var(--color-primary);
 }
 
 .hero::before {
@@ -238,7 +232,7 @@ img {
   background: radial-gradient(
     circle at center,
     rgba(59, 130, 246, 0.4) 0%,
-    /* More blue */ rgba(255, 255, 255, 0.3) 70%
+    rgba(255, 255, 255, 0.3) 70%
   );
   z-index: -1;
   opacity: 0.9;
@@ -249,7 +243,7 @@ img {
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  margin-bottom: 1rem; /* Reduce margin bottom from 2rem to 1rem */
+  margin-bottom: 1rem;
   position: relative;
   z-index: 2;
 }
@@ -275,21 +269,21 @@ img {
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
-  color: var(--color-dark); /* Ensuring dark text color for contrast */
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5); /* Subtle text shadow for better readability */
+  color: var(--color-dark);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: var(--spacing-md);
-  color: var(--color-dark); /* Ensuring dark text color for contrast */
+  color: var(--color-dark);
 }
 
 .hero-text p:last-of-type {
-  margin-bottom: 0.5rem; /* Reduce bottom margin on the last paragraph */
+  margin-bottom: 0.5rem;
 }
 
-/* Icon styling - complete integration from icon-fix.css */
+/* Icon styling */
 .icon.brands:before,
 .icon.solid:before,
 .icon.fas:before,
@@ -309,7 +303,7 @@ img {
   opacity: 1 !important;
 }
 
-/* Social links - enhanced with fixes from social-icons-fix.css */
+/* Social links */
 .social-links {
   display: flex;
   list-style: none;
@@ -341,7 +335,7 @@ img {
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   transform: none;
-  will-change: transform; /* Performance optimization */
+  will-change: transform;
   text-align: center;
 }
 
@@ -370,7 +364,7 @@ img {
   display: inline-block;
   padding: 0.8rem 2rem;
   background-color: var(--color-primary);
-  color: #ffffff; /* Always white text for better contrast */
+  color: #ffffff;
   border-radius: var(--border-radius-md);
   font-weight: 600;
   transition: all var(--transition-fast) ease;
@@ -382,7 +376,7 @@ img {
   background-color: var(--color-primary-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  color: #ffffff; /* Ensure text stays white on hover */
+  color: #ffffff;
 }
 
 .btn-outline {
@@ -446,7 +440,7 @@ img {
 .featured-project-img img {
   max-width: 100%;
   width: 100%;
-  object-fit: contain; /* Changed from cover to contain to preserve aspect ratio */
+  object-fit: contain;
   border-radius: var(--border-radius-md);
 }
 
@@ -581,7 +575,6 @@ img {
   }
 }
 
-/* Staggered animation for skill items */
 .skill-item:nth-child(1) {
   animation-delay: 0.1s;
 }
@@ -609,7 +602,7 @@ img {
 
 /* Footer */
 .footer {
-  background-color: #0f172a; /* Navy blue to match header */
+  background-color: #0f172a;
   color: var(--color-white);
   padding: var(--spacing-xl) 0;
   text-align: center;
@@ -646,7 +639,7 @@ img {
   text-decoration: none;
   position: relative;
   text-align: center;
-  will-change: transform; /* Performance optimization */
+  will-change: transform;
 }
 
 .footer-social a:hover {
@@ -781,45 +774,40 @@ img {
 }
 
 .navbar-scrolled {
-  background-color: rgba(15, 23, 42, 0.95); /* Match the header color */
+  background-color: rgba(15, 23, 42, 0.95);
   box-shadow: var(--shadow-md);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 0.5rem 2rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
   transition: all 0.3s ease;
 }
 
-/* Specific icon content definitions with improved compatibility */
 .icon.brands.fa-linkedin:before {
   content: "\f08c";
 }
-
 .icon.brands.fa-github:before {
   content: "\f09b";
 }
-
 .icon.solid.alt.fa-envelope:before {
   content: "\f0e0";
 }
-
 .icon.fas.fa-file-alt:before,
 .fa-file-alt:before {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900; /* Important for solid icons */
+  font-weight: 900;
   content: "\f15c";
 }
-
 .fa-moon:before {
   content: "\f186";
 }
-
 .fa-sun:before {
   content: "\f185";
 }
-
 .fa-arrow-up:before {
   content: "\f062";
 }
@@ -882,16 +870,13 @@ img {
 .delay-1 {
   animation-delay: 0.1s;
 }
-
 .delay-2 {
   animation-delay: 0.3s;
 }
-
 .delay-3 {
   animation-delay: 0.5s;
 }
 
-/* Scroll animations */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -903,7 +888,6 @@ img {
   transform: translateY(0);
 }
 
-/* Theme toggle button icons */
 .theme-toggle i {
   position: absolute;
   font-size: 1.2rem;
@@ -915,40 +899,35 @@ img {
 .theme-toggle .fa-sun {
   display: none;
 }
-
 .theme-toggle .fa-moon {
   display: block;
 }
 
-/* Responsive styles */
 @media (max-width: 992px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
   }
-
   .hero-text {
     text-align: center;
   }
-
   .featured-project {
     flex-direction: column;
   }
-
+  .featured-project-img {
+    order: -1;
+  }
   .nav-links {
     display: none;
   }
-
   .menu-toggle {
     display: block;
   }
-
   .mobile-nav {
     display: flex;
   }
-
   .header {
-    padding: 1rem 0; /* Even less padding on mobile */
+    padding: 1rem 0;
   }
 }
 
@@ -956,33 +935,26 @@ img {
   h1 {
     font-size: 2rem;
   }
-
   h2 {
     font-size: 1.75rem;
   }
-
   h3 {
     font-size: 1.25rem;
   }
-
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
   .footer-social {
     flex-wrap: wrap;
   }
-
   .profile-img {
     width: 200px;
     height: 200px;
   }
-
   .contact-info {
     margin-bottom: var(--spacing-lg);
     text-align: center;
   }
-
   .contact-methods {
     align-items: center;
   }
