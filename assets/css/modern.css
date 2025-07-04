@@ -119,6 +119,7 @@ img {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Center children vertically */
   background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95));
   background-size: cover;
   background-position: center;
@@ -928,6 +929,11 @@ img {
   }
   .header {
     padding: 1rem 0;
+    justify-content: flex-start;
+    min-height: auto;
+  }
+  .hero {
+    margin: 2rem auto;
   }
 }
 
