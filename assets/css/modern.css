@@ -275,7 +275,7 @@ img {
 
 .hero-text h2 {
   font-size: 1.75rem; /* Smaller for the tagline */
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1.5rem;
   color: var(--color-dark);
   text-shadow: none;
   font-weight: 600; /* less bold */
@@ -283,7 +283,8 @@ img {
 
 .hero-text p {
   font-size: 1.1rem;
-  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
   color: var(--color-dark); /* Reverted to dark text */
 }
 
