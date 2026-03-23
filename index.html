@@ -13,7 +13,7 @@
     <meta name="author" content="Louis Mascari" />
     <meta
       name="keywords"
-      content="developer, software engineer, full-stack, fullstack, django, sql, nosql, aws, javascript, typescript, react, ruby, python, nodejs, mangowave, webgl, audio visualizer"
+      content="developer, software engineer, full-stack, fullstack, django, sql, dynamodb, aws, javascript, typescript, react, python, nodejs, mangowave, webgl, audio visualizer"
     />
 
     <!-- Open Graph / Social Media Meta Tags -->
@@ -201,6 +201,8 @@
               An open-source audio visualizer with 400+ presets powered by WebGL 2.
               Supports system audio capture, local files, and microphone input with a
               10-band equalizer, Spotify integration, and localization across 9 languages.
+              Architected with a serverless AWS backend (CDK, Lambda, DynamoDB) to
+              handle OAuth and cloud settings synchronization.
             </p>
             <div class="project-tech">
               <span class="tech-tag">TypeScript</span>
@@ -243,13 +245,13 @@
               <a target="_blank" href="https://mimic-replay.com">MIMIC</a>
             </h3>
             <p>
-              For developers, MIMIC provides a Python CLI installer, simplifying
-              the instrumentation of applications to enable session recording.
-              Additionally, MIMIC offers a robust backend infrastructure and
-              feature-rich frontend dashboard to efficiently manage session data
-              and provide insightful analytics. With MIMIC, developers gain a
-              powerful toolset to diagnose and resolve issues swiftly, ensuring
-              optimal performance and user satisfaction.
+              An open-source, error-focused session replay framework for remote
+              debugging. We engineered a four-stage telemetry pipeline to capture
+              DOM mutations and network requests, backed by an event-driven hybrid
+              storage strategy utilizing Redis for active sessions and AWS S3 for
+              long-term archival. It features an automated Python CLI for seamless
+              target instrumentation and an Express/React dashboard for
+              high-fidelity playback.
             </p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
@@ -294,59 +296,49 @@
         </div>
         <div class="skills-container reveal">
           <div class="skill-category">
-            <h3>Frontend</h3>
+            <h3>Languages & Databases</h3>
             <div class="skill-list">
+              <div class="skill-item">Python</div>
               <div class="skill-item">JavaScript</div>
               <div class="skill-item">TypeScript</div>
-              <div class="skill-item">React</div>
               <div class="skill-item">HTML/CSS</div>
-              <div class="skill-item">MUI</div>
-              <div class="skill-item">Tailwind CSS</div>
-              <div class="skill-item">i18next</div>
+              <div class="skill-item">SQL</div>
+              <div class="skill-item">PostgreSQL</div>
+              <div class="skill-item">MongoDB</div>
+              <div class="skill-item">DynamoDB</div>
+              <div class="skill-item">Redis</div>
+              <div class="skill-item">GraphQL</div>
+              <div class="skill-item">REST</div>
+              <div class="skill-item">Ruby</div>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Backend & APIs</h3>
+            <h3>Frameworks & Testing</h3>
             <div class="skill-list">
-              <div class="skill-item">Python</div>
+              <div class="skill-item">React</div>
               <div class="skill-item">Django</div>
               <div class="skill-item">Node.js</div>
               <div class="skill-item">Express</div>
-              <div class="skill-item">Ruby</div>
-              <div class="skill-item">GraphQL</div>
-              <div class="skill-item">REST</div>
-              <div class="skill-item">SQL</div>
-              <div class="skill-item">Bash</div>
+              <div class="skill-item">Tailwind CSS</div>
+              <div class="skill-item">MUI</div>
+              <div class="skill-item">Playwright</div>
+              <div class="skill-item">Cypress</div>
+              <div class="skill-item">Jest</div>
+              <div class="skill-item">Vitest</div>
             </div>
           </div>
           <div class="skill-category">
-            <h3>Database & Cloud</h3>
+            <h3>Cloud & DevOps</h3>
             <div class="skill-list">
-              <div class="skill-item">PostgreSQL</div>
-              <div class="skill-item">MongoDB</div>
-              <div class="skill-item">NoSQL</div>
-              <div class="skill-item">Redis</div>
               <div class="skill-item">AWS</div>
-              <div class="skill-item">Twilio</div>
-              <div class="skill-item">Sentry</div>
+              <div class="skill-item">Docker</div>
+              <div class="skill-item">GitHub Actions</div>
+              <div class="skill-item">CircleCI</div>
               <div class="skill-item">Datadog</div>
+              <div class="skill-item">Sentry</div>
               <div class="skill-item">PostHog</div>
               <div class="skill-item">Nginx</div>
               <div class="skill-item">Caddy</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>DevOps & Tools</h3>
-            <div class="skill-list">
-              <div class="skill-item">Docker</div>
-              <div class="skill-item">CircleCI</div>
-              <div class="skill-item">GitHub Actions</div>
-              <div class="skill-item">Git/GitHub</div>
-              <div class="skill-item">unittest</div>
-              <div class="skill-item">Jest</div>
-              <div class="skill-item">Cypress</div>
-              <div class="skill-item">Vitest</div>
-              <div class="skill-item">Playwright</div>
             </div>
           </div>
         </div>
