@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <title>Louis Mascari | Software Engineer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Louis Mascari - Full Stack Software Engineer and creator of MangoWave. Specializing in TypeScript, React, GraphQL, Python, Django, WebGL, WebAssembly, WebRTC, AWS and more."
+      content="Louis Mascari — full-stack software engineer at Songtrust. Creator of MangoWave, a browser-based audio visualizer, and co-creator of MIMIC. TypeScript, React, Next.js, Node, Python, Django, GraphQL, AWS."
     />
 
     <!-- SEO Meta Tags -->
@@ -14,14 +14,14 @@
     <meta name="author" content="Louis Mascari" />
     <meta
       name="keywords"
-      content="developer, software engineer, full-stack, fullstack, django, sql, dynamodb, aws, javascript, typescript, react, python, nodejs, mangowave, webgl, glsl, webassembly, wasm, webrtc, web workers, iac, audio visualizer"
+      content="developer, software engineer, full-stack, fullstack, frontend, django, sql, dynamodb, aws, javascript, typescript, react, python, nodejs, mangowave, webgl, glsl, webassembly, wasm, webrtc, web workers, iac, audio visualizer"
     />
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Louis Mascari | Software Engineer" />
     <meta
       property="og:description"
-      content="Full Stack Software Engineer and creator of MangoWave. Specializing in TypeScript, React, GraphQL, Python, Django, WebGL, WebAssembly, WebRTC, AWS and more."
+      content="Full-stack engineer at Songtrust. Creator of MangoWave and co-creator of MIMIC."
     />
     <meta
       property="og:image"
@@ -35,491 +35,390 @@
     <meta name="twitter:title" content="Louis Mascari | Software Engineer" />
     <meta
       name="twitter:description"
-      content="Full Stack Software Engineer and creator of MangoWave. Specializing in TypeScript, React, GraphQL, Python, Django, WebGL, WebAssembly, WebRTC, AWS and more."
+      content="Full-stack engineer at Songtrust. Creator of MangoWave and co-creator of MIMIC."
     />
     <meta
       name="twitter:image"
       content="https://louis-mascari.com/images/profile.jpg"
     />
 
+    <meta name="theme-color" content="#0b0e12" />
+
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/modern.css" />
-    <link rel="stylesheet" href="assets/css/dark-mode.css" />
-    <!-- Fallback styles for older browsers -->
+
+    <!-- Progressive enhancement flag: swap no-js -> js before first paint -->
     <script>
-      if (
-        !window.CSS ||
-        !window.CSS.supports ||
-        !window.CSS.supports("--a", "0")
-      ) {
-        document.write(
-          '<link rel="stylesheet" href="assets/css/fallback.css">'
-        );
-      }
+      document.documentElement.className = "js";
     </script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
   </head>
   <body>
-    <!-- Page Loader -->
-    <div class="page-loader">
-      <div class="loader"></div>
-    </div>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#work" class="skip-link">Skip to content</a>
 
-    <!-- Header Section -->
-    <header class="header" id="home">
-      <div class="container">
-        <div class="navbar-container">
-          <nav class="navbar">
-            <div class="logo">
-              <a href="#home"
-                ><img
-                  src="favicon.ico"
-                  alt="Logo"
-                  class="logo-img"
-                  style="width: 40px; height: 40px"
-              /></a>
-            </div>
-            <ul class="nav-links">
-              <li>
-                <a href="#featured">Featured</a>
-              </li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li>
-                <a href="assets/Louis_Mascari_Resume.pdf" target="_blank"
-                  >Resume</a
-                >
-              </li>
-            </ul>
-            <button class="menu-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </nav>
-          <!-- Mobile Navigation -->
-          <div class="mobile-nav">
-            <ul>
-              <li>
-                <a href="#featured">Featured</a>
-              </li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li>
-                <a href="assets/Louis_Mascari_Resume.pdf" target="_blank"
-                  >Resume</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
+    <!-- Header / Nav -->
+    <header class="site-header">
+      <div class="wrap nav">
+        <a href="#top" class="brand" aria-label="Louis Mascari — home">
+          <svg class="brand-mark" viewBox="0 0 40 24" aria-hidden="true">
+            <path
+              d="M1 12 H7 L10 12 L12 4 L15 20 L18 8 L21 16 L23 12 H29 L31 6 L33 12 H39"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="brand-name">Louis&nbsp;Mascari</span>
+        </a>
 
-        <div class="hero">
-          <div class="hero-content">
-            <div class="hero-left-column">
-              <div class="profile-container animate-fadeIn">
-                <img
-                  src="./images/profile.jpg"
-                  alt="Portrait of Louis Mascari"
-                  class="profile-img"
-                />
-              </div>
-              <ul class="social-links animate-fadeIn delay-3">
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://www.linkedin.com/in/louis-mascari/"
-                    class="icon brands fa-linkedin"
-                    ><span class="label">LinkedIn</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="https://github.com/Louis-Mascari"
-                    class="icon brands fa-github"
-                    ><span class="label">GitHub</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="mailto:LouisMascari@gmail.com"
-                    class="icon solid alt fa-envelope"
-                    ><span class="label">Email</span></a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    href="assets/Louis_Mascari_Resume.pdf"
-                    class="icon fas fa-file-alt"
-                    ><span class="label">Resume</span></a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="hero-text">
-              <h1 class="animate-fadeIn delay-1">Louis Mascari</h1>
-              <h2 class="animate-fadeIn delay-1">
-                Bridging complex systems and intuitive design.
-              </h2>
-              <p class="animate-fadeIn delay-2">
-                I’m a Full Stack Software Engineer at Songtrust, building fast, reliable web applications with
-                <strong>TypeScript, React, GraphQL, Python, Django, and AWS</strong>.
-              </p>
-              <p class="animate-fadeIn delay-2">
-                Most recently, I built <a href="https://mangowave.app" target="_blank"><strong>MangoWave</strong></a>, an open-source, browser-based audio visualizer.
-              </p>
-              <p class="animate-fadeIn delay-2">
-                Previously, I was a <strong>Doctor of Physical Therapy</strong>.
-                That background shaped my "diagnostic" approach to engineering: I don't just treat symptoms; I dig for root causes to build software that is healthy, maintainable, and solves real user problems.
-              </p>
-              <div class="hero-cta-buttons animate-fadeIn delay-3">
-                <a href="#featured" class="btn">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Get in Touch</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#work">Work</a>
+          <a href="#stack">Stack</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="assets/Louis_Mascari_Resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
+        </nav>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="mobile-nav" id="mobile-nav" hidden>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Louis_Mascari_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </header>
-    <!-- Featured Project -->
-    <section id="featured" class="section">
-      <div class="container">
-        <div class="section-title reveal">
-          <h2>Featured</h2>
+
+    <!-- Hero -->
+    <section class="hero wrap" aria-labelledby="hero-name">
+      <div class="hero-text">
+        <h1 id="hero-name" class="reveal">Louis Mascari</h1>
+        <p class="lede reveal">
+          Full-stack engineer at
+          <a href="https://www.songtrust.com" target="_blank" rel="noopener">Songtrust</a>. I own features end to
+          end, from planning with Product and Design to production.
+        </p>
+        <p class="sub reveal">
+          Songtrust helps songwriters and publishers register and collect the
+          royalties they're owed worldwide, and I build the products they use to do
+          it.
+        </p>
+        <p class="sub reveal">
+          On my own time I built
+          <a href="https://mangowave.app" target="_blank" rel="noopener">MangoWave</a>,
+          a free, no-install browser audio visualizer in the tradition of Winamp and
+          MilkDrop, and co-created
+          <a href="https://mimic-replay.com" target="_blank" rel="noopener">MIMIC</a>,
+          a session-replay framework spanning app instrumentation, a backend
+          pipeline, and a playback dashboard.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn btn-primary">View the work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
-        <div class="featured-project reveal">
-          <div class="featured-project-content">
-            <h3>
-              <a target="_blank" href="https://mangowave.app">MangoWave</a>
-            </h3>
+        <ul class="social reveal" aria-label="Profiles">
+          <li>
+            <a href="https://github.com/Louis-Mascari" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/louis-mascari/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:LouisMascari@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm10 8.62L3.6 6H20.4L12 12.62ZM3 8.13V18h18V8.13l-8.38 6.6a1 1 0 0 1-1.24 0L3 8.13Z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-scope reveal">
+        <div class="scope-frame">
+          <div class="scope-labels">
+            <span>MANGOWAVE <em class="ch1">◆</em></span>
+            <span class="live"><span class="pulse"></span>LIVE</span>
+          </div>
+          <div class="scope-screen">
+            <video id="mw-video" autoplay loop muted playsinline preload="metadata" poster="images/mangowave-poster.webp">
+              <source src="images/mangowave-demo.mp4" type="video/mp4" />
+            </video>
+            <button type="button" id="mw-sound" class="scope-sound" aria-pressed="false" aria-label="Unmute preview audio">
+              <svg class="i-mute" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M11 5 6 9H3v6h3l5 4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m16 9 5 6m0-6-5 6"/></svg>
+              <svg class="i-on" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M11 5 6 9H3v6h3l5 4z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M16 8.5a5 5 0 0 1 0 7M18.7 6a8 8 0 0 1 0 12"/></svg>
+              <span class="scope-sound-txt">Unmute</span>
+            </button>
+          </div>
+          <div class="scope-caption"><a href="https://mangowave.app" target="_blank" rel="noopener">browser-based WebGL visualizer · mangowave.app <span aria-hidden="true">→</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <main>
+      <section id="work" class="section wrap">
+        <div class="section-head reveal">
+          <h2>Selected work</h2>
+          <p>Two open-source projects.</p>
+        </div>
+
+        <!-- MIMIC -->
+        <article class="case reveal">
+          <div class="case-media">
+            <a href="https://mimic-replay.com/" target="_blank" rel="noopener" aria-label="MIMIC — open the case study">
+              <video class="natural" autoplay loop muted playsinline preload="none" poster="images/mimic-poster.webp" width="764" height="360">
+                <source src="images/mimic.mp4" type="video/mp4" />
+              </video>
+            </a>
+          </div>
+          <div class="case-body">
+            <div class="case-eyebrow">Open source · Case study</div>
+            <h3><a href="https://mimic-replay.com" target="_blank" rel="noopener">MIMIC</a></h3>
             <p>
-              An open-source, browser-based audio visualizer featuring a library of 800+ procedural presets.
-              Engineered a custom WASM-powered transpilation pipeline to convert legacy HLSL shaders into GLSL ES 3.0
-              and forked the underlying graphics engine to implement 12+ patches for GPU memory management and
-              144Hz frame-rate normalization. Supports real-time, cross-device "room" synchronization via WebRTC
-              and a serverless AWS backend for Spotify OAuth and cloud-sync.
+              An open-source, self-hosted session-replay framework for debugging
+              errors, built by a team of four. When something breaks, it records the
+              user session (DOM mutations captured with rrweb, plus custom
+              interceptors that monkey-patch fetch, XHR, and WebSocket for network
+              activity) and replays it as a live DOM reconstruction inside an iframe.
             </p>
-            <div class="project-tech">
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">WebGL 2 / GLSL</span>
-              <span class="tech-tag">WebAssembly (WASM)</span>
-              <span class="tech-tag">WebRTC</span>
-              <span class="tech-tag">Web Workers</span>
-              <span class="tech-tag">AWS (CDK, Lambda, DynamoDB)</span>
-              <span class="tech-tag">Playwright (E2E)</span>
-            </div>
-            <div class="featured-project-buttons">
-              <a target="_blank" href="https://mangowave.app" class="btn"
-                >Launch App</a
-              >
-              <a
-                target="_blank"
-                href="https://github.com/Louis-Mascari/MangoWave"
-                class="btn btn-outline"
-                >View on GitHub</a
-              >
+            <p>
+              The backend runs a four-stage telemetry pipeline across three
+              stores: Redis buffers active sessions with incremental
+              RedisJSON appends, an event-driven Redis pub/sub subscription fires on
+              key-expiry the moment a session ends to compress and archive its events
+              to S3, and PostgreSQL holds the queryable metadata. Ships with a Python
+              CLI on PyPI to instrument a target app, an Express ingestion server, and
+              a React dashboard for playback.
+            </p>
+            <ul class="tags">
+              <li>Python</li><li>React</li><li>Node.js</li><li>rrweb</li>
+              <li>Redis</li><li>S3</li><li>PostgreSQL</li>
+            </ul>
+            <div class="case-links">
+              <a href="https://mimic-replay.com" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Read the case study <span aria-hidden="true">→</span></a>
+              <a href="https://github.com/MIMIC-replay/MIMIC" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub</a>
             </div>
           </div>
-          <div class="featured-project-img">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              controls
-              preload="metadata"
-            >
+        </article>
+
+        <!-- MangoWave -->
+        <article class="case case-reverse reveal">
+          <div class="case-media">
+            <video autoplay loop muted playsinline preload="metadata" poster="images/mangowave-poster.webp">
               <source src="images/mangowave-demo.mp4" type="video/mp4" />
             </video>
           </div>
-        </div>
-        <div class="featured-project reveal">
-          <div class="featured-project-content">
-            <h3>
-              <a target="_blank" href="https://mimic-replay.com">MIMIC</a>
-            </h3>
+          <div class="case-body">
+            <div class="case-eyebrow">Open source · Live in production</div>
+            <h3><a href="https://mangowave.app" target="_blank" rel="noopener">MangoWave</a></h3>
             <p>
-              An open-source, error-focused session replay framework for remote
-              debugging. We engineered a four-stage telemetry pipeline to capture
-              DOM mutations and network requests, backed by an event-driven hybrid
-              storage strategy using Redis for active sessions and AWS S3 for
-              long-term archival. It includes a Python CLI for target
-              instrumentation and an Express/React dashboard for
-              high-fidelity playback.
+              A free, no-install browser audio visualizer built on a fork of the
+              butterchurn engine. The base engine couldn't parse newer shader presets,
+              so I compiled an HLSL to GLSL ES 3.0 converter to WebAssembly and ran it
+              on the fly in a Web Worker so it never blocks the main thread. I
+              hand-checked each new preset on desktop and mobile before shipping it,
+              more than doubling the engine's default MilkDrop library. I also patched
+              the engine for production issues: frame-rate normalization
+              for high-refresh displays, GPU memory and WebGL context-loss fixes, and
+              faster startup on mobile.
             </p>
-            <div class="project-tech">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">S3</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Analytics</span>
-            </div>
-            <div class="featured-project-buttons">
-              <a target="_blank" href="https://mimic-replay.com" class="btn"
-                >Read the Case Study</a
-              >
-              <a
-                target="_blank"
-                href="https://github.com/MIMIC-replay/MIMIC"
-                class="btn btn-outline"
-                >View on GitHub</a
-              >
+            <p>
+              Cross-device "rooms" sync peer-to-peer over WebRTC, and separate windows
+              or monitors on one machine stay in sync over BroadcastChannel, both with
+              no backend. A small serverless AWS stack handles optional Spotify and
+              cloud-sync.
+              Covered by unit and end-to-end tests.
+            </p>
+            <ul class="tags">
+              <li>TypeScript</li><li>React</li><li>WebAssembly</li><li>WebRTC</li>
+              <li>Web Workers</li><li>AWS (CDK · Lambda · DynamoDB)</li><li>Playwright</li>
+            </ul>
+            <div class="case-links">
+              <a href="https://mangowave.app" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Launch app <span aria-hidden="true">→</span></a>
+              <a href="https://github.com/Louis-Mascari/MangoWave" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub</a>
             </div>
           </div>
-          <div class="featured-project-img">
-            <a target="_blank" href="https://mimic-replay.com/"
-              ><img src="images/mimic.gif" alt="MIMIC Animation"
-            /></a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </article>
+      </section>
 
-    <!-- Skills Section -->
-    <section
-      id="skills"
-      class="section"
-      style="background-color: var(--color-light)"
-    >
-      <div class="container">
-        <div class="section-title reveal">
-          <h2>Skills & Technologies</h2>
+      <!-- More projects -->
+      <section class="section wrap">
+        <div class="section-head reveal">
+          <h2>Also built</h2>
         </div>
-        <div class="skills-container reveal">
-          <div class="skill-category">
-            <h3>Languages & Databases</h3>
-            <div class="skill-list">
-              <div class="skill-item">Python</div>
-              <div class="skill-item">JavaScript</div>
-              <div class="skill-item">TypeScript</div>
-              <div class="skill-item">HTML/CSS</div>
-              <div class="skill-item">SQL</div>
-              <div class="skill-item">PostgreSQL</div>
-              <div class="skill-item">MongoDB</div>
-              <div class="skill-item">DynamoDB</div>
-              <div class="skill-item">Redis</div>
-              <div class="skill-item">GraphQL</div>
-              <div class="skill-item">REST</div>
-              <div class="skill-item">Ruby</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Frameworks & Testing</h3>
-            <div class="skill-list">
-              <div class="skill-item">React</div>
-              <div class="skill-item">Django</div>
-              <div class="skill-item">Node.js</div>
-              <div class="skill-item">Express</div>
-              <div class="skill-item">Tailwind CSS</div>
-              <div class="skill-item">MUI</div>
-              <div class="skill-item">WebRTC</div>
-              <div class="skill-item">Web Workers</div>
-              <div class="skill-item">Playwright</div>
-              <div class="skill-item">Cypress</div>
-              <div class="skill-item">Jest</div>
-              <div class="skill-item">Vitest</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Cloud & DevOps</h3>
-            <div class="skill-list">
-              <div class="skill-item">AWS</div>
-              <div class="skill-item">IaC</div>
-              <div class="skill-item">Docker</div>
-              <div class="skill-item">GitHub Actions</div>
-              <div class="skill-item">CircleCI</div>
-              <div class="skill-item">Datadog</div>
-              <div class="skill-item">Sentry</div>
-              <div class="skill-item">PostHog</div>
-              <div class="skill-item">Nginx</div>
-              <div class="skill-item">Caddy</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-title reveal">
-          <h2>Projects</h2>
-        </div>
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card reveal">
-            <div class="project-img">
-              <img
-                src="images/request-neko.PNG"
-                alt="Request-Neko Project Screenshot"
-              />
-            </div>
-            <div class="project-content">
-              <h3>Request-Neko</h3>
-              <p>
-                A database-backed webhook request inspection and debugging
-                application.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Nginx</span>
-                <span class="tech-tag">DigitalOcean</span>
-              </div>
-            </div>
+        <div class="mini-grid">
+          <article class="mini reveal">
+            <h3><a href="https://github.com/Louis-Mascari/aloud" target="_blank" rel="noopener">aloud</a></h3>
+            <p>A local, offline voice toolkit for when you'd rather listen than read. Claude Code speaks a short recap each turn with per-tab status glyphs and a menu-bar player, plus a companion app that reads PDFs aloud. One on-device neural voice, no cloud.</p>
+            <ul class="tags">
+              <li>JavaScript</li><li>Node.js</li><li>Kokoro TTS</li><li>Lua</li><li>Swift</li>
+            </ul>
           </article>
-          <!-- Project 2 -->
-          <article class="project-card reveal">
-            <div class="project-img">
-              <img
-                src="images/sup.PNG"
-                alt="Supervisory Tracker Project Screenshot"
-              />
-            </div>
-            <div class="project-content">
-              <h3>Supervisory Tracker</h3>
-              <p>
-                A CRUD application for physical therapists to streamline
-                management of patient reevaluation and assistant supervisory
-                requirements.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Ruby</span>
-                <span class="tech-tag">Sinatra</span>
-                <span class="tech-tag">ERB</span>
-                <span class="tech-tag">PostgreSQL</span>
-              </div>
-            </div>
+          <article class="mini reveal">
+            <h3>Request-Neko</h3>
+            <p>A webhook and HTTP request inspector, built with a team of four. Spin up a unique endpoint, point any client or webhook at it, and every request streams in live with its method, path, headers, and body, pretty-printed or raw. Each endpoint gets its own subdomain behind Nginx, with requests persisted for later inspection.</p>
+            <ul class="tags">
+              <li>Node.js</li><li>Express</li><li>React</li><li>MongoDB</li><li>PostgreSQL</li><li>Nginx</li>
+            </ul>
           </article>
-          <!-- Project 3 -->
-          <article class="project-card reveal">
-            <div class="project-img">
-              <img src="images/todo.PNG" alt="What To-Do Project Screenshot" />
-            </div>
-            <div class="project-content">
-              <h3>What To-Do</h3>
-              <p>
-                An interactive single page task tracking manager with a variety
-                of filtering and sorting features.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">Handlebars</span>
-                <span class="tech-tag">jQuery</span>
-                <span class="tech-tag">PostgreSQL</span>
-              </div>
-            </div>
+          <article class="mini reveal">
+            <h3>Supervisory Tracker</h3>
+            <p>A Sinatra CRUD app I built for physical therapists, drawn from my own years in the clinic. It tracks patient reevaluation due dates and the supervision requirements for physical therapist assistants, so a caseload stays compliant without living in a spreadsheet. Postgres for persistence, with server-side validation.</p>
+            <ul class="tags">
+              <li>Ruby</li><li>Sinatra</li><li>ERB</li><li>PostgreSQL</li>
+            </ul>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-title reveal">
-          <h2>Let's Connect</h2>
+      <!-- Stack -->
+      <section id="stack" class="section wrap">
+        <div class="section-head reveal">
+          <h2>Stack</h2>
         </div>
-        <div class="contact-container reveal">
-          <div class="contact-info">
-            <p>I’m currently building full-stack features at <strong>Songtrust</strong> and shipping open-source projects like <a href="https://mangowave.app" target="_blank"><strong>MangoWave</strong></a>.</p>
-            <p>I’m always open to connecting. Feel free to reach out if you want to nerd out about <strong>software architecture, video games, lifting</strong>, or the <strong>transition from healthcare to engineering</strong>.</p>
-            <div class="contact-methods">
-              <div class="contact-method">
-                <a href="mailto:LouisMascari@gmail.com">
-                  <i class="fas fa-envelope"></i>
-                  <span>LouisMascari@gmail.com</span>
-                </a>
-              </div>
-              <div class="contact-method">
-                <a
-                  href="https://www.linkedin.com/in/louis-mascari/"
-                  target="_blank"
-                >
-                  <i class="fab fa-linkedin"></i>
-                  <span>linkedin.com/in/louis-mascari</span>
-                </a>
-              </div>
-              <div class="contact-method">
-                <a href="https://github.com/Louis-Mascari" target="_blank">
-                  <i class="fab fa-github"></i>
-                  <span>github.com/Louis-Mascari</span>
-                </a>
-              </div>
-            </div>
+        <div class="stack-grid">
+          <div class="stack-col reveal">
+            <h3>Frontend</h3>
+            <ul class="stack-list">
+              <li>TypeScript · JavaScript</li>
+              <li>React · Next.js</li>
+              <li>HTML / CSS</li>
+              <li>Web Workers · WebRTC</li>
+              <li>Tailwind · MUI</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Backend &amp; data</h3>
+            <ul class="stack-list">
+              <li>Python · Django</li>
+              <li>Node.js · Express</li>
+              <li>GraphQL · Apollo Federation · REST</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB · DynamoDB</li>
+              <li>Redis</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Cloud &amp; infra</h3>
+            <ul class="stack-list">
+              <li>AWS (Lambda · ECS · API Gateway · Cognito · S3)</li>
+              <li>CDK · IaC · Docker</li>
+              <li>CircleCI · GitHub Actions</li>
+              <li>Nginx · Caddy</li>
+            </ul>
+          </div>
+          <div class="stack-col reveal">
+            <h3>Quality &amp; tooling</h3>
+            <ul class="stack-list">
+              <li>Playwright · Cypress</li>
+              <li>Jest · Vitest</li>
+              <li>Datadog · Sentry · PostHog</li>
+              <li>Claude Code</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <ul class="footer-social">
-          <li>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/louis-mascari/"
-              class="icon brands fa-linkedin"
-              ><span class="label">LinkedIn</span></a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/Louis-Mascari"
-              class="icon brands fa-github"
-              ><span class="label">GitHub</span></a
-            >
-          </li>
-          <li>
-            <a
-            href="mailto:LouisMascari@gmail.com"
-            class="icon solid alt fa-envelope"
-            ><span class="label">Email</span></a
-            >
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="assets/Louis_Mascari_Resume.pdf"
-              class="icon fas fa-file-alt"
-              ><span class="label">Resume</span></a
-            >
-          </li>
-        </ul>
-        <div class="footer-text">
-          <p>&copy; 2026 Louis Mascari. All rights reserved.</p>
+      <!-- About -->
+      <section id="about" class="section wrap">
+        <div class="about">
+          <div class="about-portrait reveal">
+            <img src="images/profile.webp" alt="Portrait of Louis Mascari" width="600" height="672" loading="lazy" />
+          </div>
+          <div class="about-body reveal">
+            <h2>About</h2>
+            <p>
+              Most of my time at Songtrust has gone into the tools music publishers
+              use to collect royalties, on a <strong>Python/Django</strong> and
+              <strong>React/TypeScript</strong> stack where I've owned initiatives end
+              to end: the Business Signup Migration and Draft State epics, moving the
+              core song-submission flow off legacy Django to React, and platform
+              hardening like multi-factor auth and user-enumeration prevention. More
+              recently I've moved into leading development on a new platform, working
+              directly with our head of technology to build it. It's a
+              GraphQL federation layer (<strong>TypeScript, Node, Next.js, Apollo Federation</strong>)
+              that unifies data across operating companies into one hub, with
+              multi-tenancy and row-level security.
+            </p>
+            <p>
+              Before software, I practiced as a
+              <strong>Doctor of Physical Therapy</strong>. I managed complex patient
+              caseloads, supervised physical therapist assistants, and worked daily
+              with interdisciplinary care teams. As a traveling physical therapist, I
+              took three- to six-month stints at underserved clinics, taking over full
+              caseloads on arrival to keep care continuous. That work taught me to move without perfect
+              information and to pull in the right people at the right time. I bring
+              the same to engineering.
+            </p>
+            <p>
+              I retrained through
+              <a href="https://launchschool.com/employers" target="_blank" rel="noopener">Launch School</a>
+              and a CS degree and moved into engineering full-time in 2024. Early on, I landed accepted patches to
+              the Firefox codebase.
+            </p>
+            <p class="about-tags">
+              Outside work: video games, lifting, and open source. Happy to talk
+              about any of it, or the move from healthcare into engineering.
+            </p>
+          </div>
         </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section wrap">
+        <div class="contact reveal">
+          <h2>Let's connect</h2>
+          <div class="contact-methods">
+            <a href="mailto:LouisMascari@gmail.com" class="contact-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm10 8.62L3.6 6H20.4L12 12.62ZM3 8.13V18h18V8.13l-8.38 6.6a1 1 0 0 1-1.24 0L3 8.13Z"/></svg>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">LouisMascari@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/louis-mascari/" target="_blank" rel="noopener" class="contact-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.46c.98 0 1.77-.78 1.77-1.73V1.73C24 .77 23.21 0 22.23 0Z"/></svg>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">/in/louis-mascari</span>
+            </a>
+            <a href="https://github.com/Louis-Mascari" target="_blank" rel="noopener" class="contact-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">/Louis-Mascari</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a href="#top" class="brand" aria-label="Back to top">
+          <svg class="brand-mark" viewBox="0 0 40 24" aria-hidden="true">
+            <path d="M1 12 H7 L10 12 L12 4 L15 20 L18 8 L21 16 L23 12 H29 L31 6 L33 12 H39" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <p>&copy; 2026 Louis Mascari</p>
+        <a href="#top" class="to-top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
 
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" aria-label="Toggle dark/light mode">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-    </button>
-
-    <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- Scripts -->
     <script src="assets/js/modern.js"></script>
   </body>
 </html>

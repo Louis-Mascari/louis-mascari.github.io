@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Louis Mascari">
+  <rect width="40" height="40" rx="9" fill="#12151b"/>
+  <path d="M3 20 H8 L11 20 L13 11 L16 29 L19 15 L22 25 L24 20 H30 L32 13 L34 20 H37"
+    fill="none" stroke="#f0b64d" stroke-width="2.4"
+    stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,166 +1,76 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Handle page loader
-  const pageLoader = document.querySelector(".page-loader");
-  if (pageLoader) {
-    // Hide loader after page is fully loaded
-    window.addEventListener("load", () => {
-      fadeOutLoader();
-    });
+/* ============================================================
+   Louis Mascari — portfolio interactions
+   Vanilla JS, no dependencies.
+   ============================================================ */
+(() => {
+  "use strict";
 
-    // Fallback to hide loader if load event doesn't fire
-    setTimeout(fadeOutLoader, 2000);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    function fadeOutLoader() {
-      pageLoader.classList.add("fade-out");
-      setTimeout(() => {
-        pageLoader.style.display = "none";
-      }, 500);
-    }
+  /* ---------- Sticky nav shadow ---------- */
+  const header = document.querySelector(".site-header");
+  if (header) {
+    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Initialize theme from localStorage or system preference
-  initTheme();
-
-  // Navigation scroll effect
-  const header = document.querySelector(".navbar-container");
-  const backToTop = document.querySelector(".back-to-top");
-
-  if (header || backToTop) {
-    window.addEventListener("scroll", () => {
-      if (header) {
-        if (window.scrollY > 100) {
-          header.classList.add("navbar-scrolled");
-        } else {
-          header.classList.remove("navbar-scrolled");
-        }
-      }
-
-      // Show/hide back to top button
-      if (backToTop) {
-        if (window.scrollY > 300) {
-          backToTop.classList.add("visible");
-        } else {
-          backToTop.classList.remove("visible");
-        }
-      }
+  /* ---------- Mobile menu ---------- */
+  const toggle = document.querySelector(".menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  if (toggle && mobileNav) {
+    const setOpen = (open) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      mobileNav.hidden = !open;
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    };
+    toggle.addEventListener("click", () =>
+      setOpen(toggle.getAttribute("aria-expanded") !== "true")
+    );
+    mobileNav.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => setOpen(false))
+    );
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
     });
   }
 
-  // Initialize theme function
-  function initTheme() {
-    // Check if user has a saved theme preference
-    const savedTheme = localStorage.getItem("theme");
-    document.documentElement.setAttribute("data-theme", savedTheme || "light");
-  }
-
-  // Animate elements when they come into view
-  const revealElements = document.querySelectorAll(".reveal");
-
-  function checkReveal() {
-    for (let i = 0; i < revealElements.length; i++) {
-      const windowHeight = window.innerHeight;
-      const elementTop = revealElements[i].getBoundingClientRect().top;
-      const elementVisible = 150;
-
-      if (elementTop < windowHeight - elementVisible) {
-        revealElements[i].classList.add("active");
-      }
-    }
-  }
-
-  window.addEventListener("scroll", checkReveal);
-  // Check on initial load
-  checkReveal();
-
-  // Theme toggle functionality
-  const themeToggle = document.querySelector(".theme-toggle");
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      // Toggle theme
-      const currentTheme =
-        document.documentElement.getAttribute("data-theme") || "light";
-      const newTheme = currentTheme === "light" ? "dark" : "light";
-
-      // Set theme attribute and save preference
-      document.documentElement.setAttribute("data-theme", newTheme);
-      localStorage.setItem("theme", newTheme);
-
-      // Force redraw of icons for browsers that might have caching issues
-      const icons = document.querySelectorAll(
-        ".icon.brands, .icon.solid, .icon.fas, .icon.fab"
+  /* ---------- Reveal on scroll ---------- */
+  const revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach((el) => el.classList.add("in"));
+    } else {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
       );
-      icons.forEach((icon) => {
-        // Save the original display value
-        const originalDisplay = window.getComputedStyle(icon).display;
-        // Force a redraw by temporarily hiding and showing
-        icon.style.display = "none";
-        void icon.offsetWidth; // Trigger reflow
-        icon.style.display = originalDisplay;
-
-        // Also apply transform to force repaint
-        icon.style.transform = "translateZ(0)";
-        setTimeout(() => {
-          icon.style.transform = "";
-        }, 10);
-      });
-    });
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href");
-      if (targetId === "#") return;
-
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        // Calculate offset for fixed header
-        const header = document.querySelector(".navbar-container");
-        const headerHeight = header ? header.offsetHeight : 0;
-
-        // Get element's position relative to the document
-        const elementTop =
-          targetElement.getBoundingClientRect().top + window.pageYOffset;
-
-        // Scroll to position minus header height
-        window.scrollTo({
-          top: elementTop - headerHeight - 12, // 12px extra space for visual comfort
-          behavior: "smooth",
-        });
-      }
-    });
-  });
-
-  // Mobile menu toggle
-  const menuToggle = document.querySelector(".menu-toggle");
-  const mobileNav = document.querySelector(".mobile-nav");
-
-  if (menuToggle && mobileNav) {
-    menuToggle.addEventListener("click", toggleMobileNav);
-
-    // Close mobile menu when a link is clicked
-    mobileNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", toggleMobileNav);
-    });
-
-    // Function to toggle mobile nav
-    function toggleMobileNav() {
-      mobileNav.classList.toggle("active");
-      menuToggle.classList.toggle("active");
+      revealEls.forEach((el) => io.observe(el));
     }
+  }
 
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", (event) => {
-      if (
-        mobileNav.classList.contains("active") &&
-        !mobileNav.contains(event.target) &&
-        !menuToggle.contains(event.target)
-      ) {
-        toggleMobileNav();
+  /* ---------- MangoWave preview: click to unmute ---------- */
+  const mwSound = document.getElementById("mw-sound");
+  const mwVideo = document.getElementById("mw-video");
+  if (mwSound && mwVideo) {
+    const txt = mwSound.querySelector(".scope-sound-txt");
+    mwSound.addEventListener("click", () => {
+      const turnOn = mwVideo.muted; // currently muted -> turn sound on
+      mwVideo.muted = !turnOn;
+      if (turnOn) {
+        mwVideo.volume = 0.6;
+        mwVideo.play().catch(() => {});
       }
+      mwSound.setAttribute("aria-pressed", String(turnOn));
+      mwSound.setAttribute("aria-label", turnOn ? "Mute preview audio" : "Unmute preview audio");
+      if (txt) txt.textContent = turnOn ? "Mute" : "Unmute";
     });
   }
-});
+})();

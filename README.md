@@ -1,50 +1,43 @@
-# Louis Mascari - Personal Website
+# Louis Mascari — Personal Website
 
-A modern, responsive personal website showcasing my skills, experience, and projects as a full-stack software engineer.
+A hand-built portfolio for a full-stack software engineer.
+Design theme: a dark, amber-phosphor "instrument" aesthetic — the hero frames a
+MangoWave demo like a screen readout.
+
+Live: [louis-mascari.com](https://louis-mascari.com/)
 
 ## Features
 
-- **Modern Design**: Clean, minimalist UI with purposeful white space and visual hierarchy
-- **Dark/Light Mode**: User-toggleable theme with system preference detection
-- **Fully Responsive**: Optimized for all device sizes (mobile, tablet, desktop)
-- **Performant**: Fast loading times with optimized assets
-- **Accessible**: Built with accessibility in mind
-- **Interactive Elements**: Subtle animations and micro-interactions enhance user experience
-- **Contact Form**: Integrated form submission with Formspree
-- **SEO Optimized**: Meta tags, sitemap, and robots.txt for better search visibility
+- **MangoWave hero**: the flagship project's demo video framed as an instrument
+  panel, with a poster frame for instant first paint and a click-to-unmute control.
+- **Dark-committed design system**: OKLCH color tokens, fluid `clamp()` type scale.
+- **Fully responsive**: single-column reflow on tablet and mobile.
+- **Zero dependencies**: no frameworks, no icon webfont — icons are inline SVG.
+- **Accessible**: skip link, semantic landmarks, visible focus, reduced-motion support.
+- **Progressive enhancement**: content is fully visible without JavaScript; reveals
+  only activate when JS is present.
+- **SEO**: meta/OG/Twitter tags, canonical URL, sitemap, robots.txt.
 
-## Technologies Used
+## Tech
 
-- **HTML5**: Semantic markup for better accessibility and SEO
-- **CSS3**: Modern features including CSS Variables, Flexbox, and Grid
-- **Vanilla JavaScript**: No framework dependencies for better performance
-- **Font Awesome**: Icon library for social media and UI elements
+- **HTML5** — semantic markup
+- **CSS3** — custom properties (OKLCH), Grid, Flexbox, `clamp()`
+- **Vanilla JavaScript** — IntersectionObserver, no build step
+- **Fonts** — Schibsted Grotesk (display/body) + IBM Plex Mono (instrument readouts), via Google Fonts
 
 ## Structure
 
-- **Header**: Personal introduction with profile image and social links
-- **Featured Project**: Highlight of my main project (MIMIC)
-- **Project Gallery**: Showcase of additional projects with descriptions and tech stack
-- **Contact Section**: Call to action for potential employers or collaborators
-- **Footer**: Additional links and copyright information
+- `index.html` — the site (hero, selected work, stack, more projects, about, contact)
+- `assets/css/modern.css` — design system + all component styles
+- `assets/js/modern.js` — nav, mobile menu, scroll reveals, click-to-unmute
+- `404.html` — themed not-found page
+- `mango.html` — a small easter egg
 
-## Development
+## Run locally
 
-This site was modernized from a previous version based on an HTML5 UP template. The redesign focused on:
-
-1. Modernizing the visual design
-2. Improving responsiveness
-3. Enhancing user experience
-4. Optimizing performance
-5. Using current web development best practices
-
-## Getting Started
-
-To run this website locally:
-
-1. Clone the repository
-2. Open `index.html` in your browser
+Open `index.html` in a browser, or serve the folder (e.g. `python3 -m http.server`).
+Hosted on GitHub Pages.
 
 ## Contact
 
-For inquiries, please reach out to me at [LouisMascari@gmail.com](mailto:LouisMascari@gmail.com)
+[LouisMascari@gmail.com](mailto:LouisMascari@gmail.com)
