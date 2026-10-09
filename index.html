@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <title>Louis Mascari | Software Engineer</title>
+    <title>Louis Mascari | Full Stack Software Engineer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -18,7 +18,7 @@
     />
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Louis Mascari | Software Engineer" />
+    <meta property="og:title" content="Louis Mascari | Full Stack Software Engineer" />
     <meta
       property="og:description"
       content="Full-stack engineer at Songtrust. Creator of MangoWave and co-creator of MIMIC."
@@ -32,7 +32,7 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Louis Mascari | Software Engineer" />
+    <meta name="twitter:title" content="Louis Mascari | Full Stack Software Engineer" />
     <meta
       name="twitter:description"
       content="Full-stack engineer at Songtrust. Creator of MangoWave and co-creator of MIMIC."
@@ -85,7 +85,7 @@
 
         <nav class="nav-links" aria-label="Primary">
           <a href="#work">Work</a>
-          <a href="#stack">Stack</a>
+          <a href="#skills">Skills</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="assets/Louis_Mascari_Resume.pdf" target="_blank" rel="noopener" class="nav-resume">Resume</a>
@@ -98,7 +98,7 @@
 
       <div class="mobile-nav" id="mobile-nav" hidden>
         <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
+        <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="assets/Louis_Mascari_Resume.pdf" target="_blank" rel="noopener">Resume</a>
@@ -116,8 +116,8 @@
         </p>
         <p class="sub reveal">
           Songtrust helps songwriters and publishers register and collect the
-          royalties they're owed worldwide, and I build the products they use to do
-          it.
+          royalties they're owed worldwide. I build the products they use to do it,
+          and I'm now building a new platform for our parent company, Downtown Music.
         </p>
         <p class="sub reveal">
           On my own time I built
@@ -230,15 +230,16 @@
             <div class="case-eyebrow">Open source · Live in production</div>
             <h3><a href="https://mangowave.app" target="_blank" rel="noopener">MangoWave</a></h3>
             <p>
-              A free, no-install browser audio visualizer built on a fork of the
-              butterchurn engine. The base engine couldn't parse newer shader presets,
-              so I compiled an HLSL to GLSL ES 3.0 converter to WebAssembly and ran it
-              on the fly in a Web Worker so it never blocks the main thread. I
-              hand-checked each new preset on desktop and mobile before shipping it,
-              more than doubling the engine's default MilkDrop library. I also patched
-              the engine for production issues: frame-rate normalization
-              for high-refresh displays, GPU memory and WebGL context-loss fixes, and
-              faster startup on mobile.
+              A free, no-install browser audio visualizer built on a fork of
+              butterchurn, a WebGL 2 port of the MilkDrop engine. The base engine
+              couldn't parse newer shader presets, so I compiled an HLSL to GLSL ES 3.0
+              converter to WebAssembly and ran it on the fly in a Web Worker so it
+              never blocks the main thread. I hand-checked each new preset on desktop
+              and mobile before shipping it, growing the library from 395 to 832
+              presets. The fork carries 17 documented engine patches, including
+              frame-rate normalization for high-refresh displays, GPU memory leak and
+              WebGL context-loss fixes, and a texture-loading fix that removed a 3–5
+              second startup freeze on mobile.
             </p>
             <p>
               Cross-device "rooms" sync peer-to-peer over WebRTC, and separate windows
@@ -289,49 +290,50 @@
         </div>
       </section>
 
-      <!-- Stack -->
-      <section id="stack" class="section wrap">
+      <!-- Skills -->
+      <section id="skills" class="section wrap">
         <div class="section-head reveal">
-          <h2>Stack</h2>
+          <h2>Skills</h2>
         </div>
         <div class="stack-grid">
           <div class="stack-col reveal">
             <h3>Frontend</h3>
             <ul class="stack-list">
               <li>TypeScript · JavaScript</li>
-              <li>React · Next.js</li>
-              <li>HTML / CSS</li>
+              <li>React · Next.js · Apollo Client</li>
+              <li>Tailwind · MUI · HTML / CSS</li>
+              <li>WebGL · WebAssembly</li>
               <li>Web Workers · WebRTC</li>
-              <li>Tailwind · MUI</li>
             </ul>
           </div>
           <div class="stack-col reveal">
             <h3>Backend &amp; data</h3>
             <ul class="stack-list">
-              <li>Python · Django</li>
               <li>Node.js · Express</li>
+              <li>Python · Django · FastAPI</li>
               <li>GraphQL · Apollo Federation · REST</li>
-              <li>PostgreSQL</li>
+              <li>SQL · PostgreSQL · Redis</li>
               <li>MongoDB · DynamoDB</li>
-              <li>Redis</li>
             </ul>
           </div>
           <div class="stack-col reveal">
-            <h3>Cloud &amp; infra</h3>
+            <h3>AI &amp; agentic</h3>
             <ul class="stack-list">
-              <li>AWS (Lambda · ECS · API Gateway · Cognito · S3)</li>
-              <li>CDK · IaC · Docker</li>
-              <li>CircleCI · GitHub Actions</li>
-              <li>Nginx · Caddy</li>
+              <li>Claude Code · Codex · Gemini</li>
+              <li>Agent orchestration</li>
+              <li>LLM integration (Amazon Bedrock · Claude)</li>
+              <li>RAG (pgvector · embeddings)</li>
+              <li>Bedrock Guardrails</li>
             </ul>
           </div>
           <div class="stack-col reveal">
-            <h3>Quality &amp; tooling</h3>
+            <h3>Cloud &amp; tooling</h3>
             <ul class="stack-list">
-              <li>Playwright · Cypress</li>
-              <li>Jest · Vitest</li>
+              <li>AWS (CDK · Lambda · API Gateway · ECS · S3 · CloudFront · SQS · Cognito · Textract)</li>
+              <li>Docker · GitHub Actions · CircleCI · Turborepo</li>
+              <li>Playwright · Cypress · Vitest · Jest · pytest</li>
               <li>Datadog · Sentry · PostHog</li>
-              <li>Claude Code</li>
+              <li>Nginx · Caddy</li>
             </ul>
           </div>
         </div>
@@ -346,22 +348,36 @@
           <div class="about-body reveal">
             <h2>About</h2>
             <p>
-              Most of my time at Songtrust has gone into the tools music publishers
-              use to collect royalties, on a <strong>Python/Django</strong> and
-              <strong>React/TypeScript</strong> stack where I've owned initiatives end
-              to end: the Business Signup Migration and Draft State epics, moving the
-              core song-submission flow off legacy Django to React, and platform
-              hardening like multi-factor auth and user-enumeration prevention. More
-              recently I've moved into leading development on a new platform, working
-              directly with our head of technology to build it. It's a
+              Most of my time at Songtrust (Downtown Music, now part of Universal
+              Music Group) has gone into its royalty administration platform, where
+              independent musicians sign up, submit their songs, and collect the
+              royalties we register and gather for them worldwide. On that
+              <strong>Python/Django</strong> and <strong>React/TypeScript</strong>
+              stack I've owned initiatives end to end: the Business Signup Migration
+              and Draft State epics, moving the core song-submission flow off legacy
+              Django templates to React, performance work that cut the royalties
+              dashboard's main bundle by 71%, query and index fixes that made
+              songwriter search 13x faster, and authentication hardening like
+              multi-factor auth and user-enumeration prevention. More recently I've
+              been building a new platform from the ground up: a multi-tenant
               GraphQL federation layer (<strong>TypeScript, Node, Next.js, Apollo Federation</strong>)
-              that unifies data across operating companies into one hub, with
-              multi-tenancy and row-level security.
+              that integrates data across Downtown Music's operating companies. I own
+              the frontend, ship features end to end across the API layer, and review
+              code and make architectural and UI design decisions with engineering,
+              Product, and Design.
             </p>
             <p>
-              Alongside that, I help build the agentic orchestration tooling we
-              develop with, and support Product and Design in adopting agentic
-              workflows of their own.
+              With our head of technology, I co-develop the harness we use to build
+              with AI agents: agentic workflows, orchestration, and the verification
+              gates agent-written code must pass. I help Product and Design adopt
+              agentic workflows of their own.
+            </p>
+            <p>
+              On my own time I'm also building an AI-assisted clinical review tool
+              for healthcare: it reads a consult request, retrieves the matching
+              clinical criteria with RAG, and drafts a decision with references that
+              a physician can review, refine with the AI, and finalize. It runs on
+              AWS with Claude on Amazon Bedrock.
             </p>
             <p>
               Before software, I practiced as a
@@ -376,11 +392,12 @@
             <p>
               I retrained through
               <a href="https://launchschool.com/employers" target="_blank" rel="noopener">Launch School</a>
-              and a CS degree and moved into engineering full-time in 2024. Early on, I landed accepted patches to
-              the Firefox codebase.
+              and a CS degree, moved into engineering full-time in 2024, and I'm an
+              AWS Certified Solutions Architect – Associate. Early on, I landed
+              accepted patches to the Firefox codebase.
             </p>
             <p class="about-tags">
-              Outside work: video games, lifting, and open source. Happy to talk
+              Outside work: music, video games, lifting, and open source. Happy to talk
               about any of it, or the move from healthcare into engineering.
             </p>
           </div>
